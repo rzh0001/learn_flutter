@@ -3,6 +3,7 @@ import 'package:learn_flutter/Home/parts/Banner.dart';
 import 'package:learn_flutter/Home/parts/Header.dart';
 import 'package:learn_flutter/Home/parts/about.dart';
 import 'package:learn_flutter/Home/parts/dog.dart';
+import 'package:learn_flutter/Home/parts/drawer.dart';
 import 'package:learn_flutter/Home/parts/lol.dart';
 import 'package:learn_flutter/Home/parts/superCode.dart';
 
@@ -20,8 +21,9 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: Header(),
+        automaticallyImplyLeading: false,
       ),
-      // drawer:,
+      drawer: drawer(context, size),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -36,7 +38,7 @@ class _HomeState extends State<Home> {
             ),
             lol(scale, context),
             SizedBox(height: 20 * scale),
-            about(scale, context, size)
+            about(scale, context, size),
           ],
         ),
       ),

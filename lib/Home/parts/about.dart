@@ -95,7 +95,8 @@ Container about(double scale, BuildContext context, Size size) {
         Text(
           "版权所有@Flutter学习网",
           style: Theme.of(context).textTheme.apply(bodyColor: Colors.grey).bodyText2,
-        )
+        ),
+        SizedBox(height: 10,)
       ],
     ),
   );
